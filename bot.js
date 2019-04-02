@@ -372,7 +372,7 @@ G-admin ( اكتب الرسالة هنا ) | او ارسل رسالتك للبو
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 client.on('message', message => {
-    if (message.content.startsWith("A-yes")) {
+    if (message.content.startsWith("A+yes")) {
     let embed = new Discord.RichEmbed() 
     .setColor("#ffffff")
     .setTimestamp('**Clicl here to add ..**')
