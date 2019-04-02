@@ -27,7 +27,7 @@ const pretty = require('pretty-ms')
 
 client.on('ready', function(){
     var ms = 15000 ;
-    var setGame = [`${client.guilds.size} Server`,'-invite bot | for add this bot👾 in your server',`${client.users.size} Members`,'اوامر البوت 📌 GE-help | GE-مساعدة','Bot By: DEX Gamer'];
+    var setGame = [`${client.guilds.size} Server`,'📌 invite bot | for add this bot👾 in your server',`${client.users.size} Members`,'اوامر البوت >> 📌 help | 📌 مساعدة','Bot By: DEX Gamer'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -62,29 +62,6 @@ client.on('ready', function(){
   console.log('')
 });
 
-
-// كود دعوة بواسطة
-const invites = {};
-const wait = require('util').promisify(setTimeout);
-client.on('ready', () => {
-  wait(1000);
-  client.guilds.forEach(king => {
-    king.fetchInvites().then(guildInvites => {
-      invites[king.id] = guildInvites;
-    });
-  });
-});
-
-client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-    const gamer = invites[member.guild.id];
-    invites[member.guild.id] = guildInvites;
-    const invite = guildInvites.find(i => gamer.get(i.code).uses < i.uses);
-    const inviter = client.users.get(invite.inviter.id);
-    const welcome = member.guild.channels.find(channel => channel.name === "general");
-    welcome.send(` ${member.user.tag} تم دعوته بواسطة : ||${inviter.tag}|| عدد الدعوات = ${invite.uses} `)
-  });
-});
 
 
 
@@ -121,7 +98,7 @@ client.on('message', function(message) {
 client.on('guildCreate', guild => {
     var embed = new Discord.RichEmbed()
     .setColor(0x5500ff)
-    .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك وهذا أمر المساعدة | GE-help او GE-مساعدة**`)
+    .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك وهذا أمر المساعدة >> 📌 help | 📌 مساعدة**`)
         guild.owner.send(embed)
   });
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// انفايت رابط
@@ -144,13 +121,13 @@ client.on('message', message => {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// كود انفايت البوت
 client.on('message', message => {
   if (true) {
-if (message.content === 'G-invite bot') {
+if (message.content === '📌 invite') {
       message.author.send('  **هذا هو رابط البوت وتستطيع اضافته الى سيرفرك بنجاع** |	  https://discordapp.com/oauth2/authorize?client_id=556967912104263686&permissions=8&scope=bot  ').catch(e => console.log(e.stack));
     }
    }
   }); 
 client.on('message', message => {
-     if (message.content === "G-invite bot") {
+     if (message.content === "📌 invite") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
@@ -158,39 +135,9 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-//////////////////////////////////////////////////////////////////////////////////////////////////////////// السيرفرات التي فيها بوتنا
-client.on('message', message => {
-    if(message.content == 'G-bot GE') {
-             if(!message.author.id === '556833562549026816') return;
-    var gimg;
-    var gname;
-    var gmemb;
-    var gbots;
-    var groles;
-    var servers = client.guilds;
-    servers.forEach((g)=>{
-    gname = g.name;
-    gimg = g.iconURL;
-    gmemb = g.members.size;
-    gbots = g.members.filter(m=>m.bot).size;
-    groles = g.roles.map(r=> {return r.name});
-    let serv = new Discord.RichEmbed()
-    .setAuthor(gname,gimg)
-    .setThumbnail(gimg)
-    .addField('**عدد الأعضاء** ',gmemb = g.members.size)
-    .setColor('RANDOM')
-     message.channel.sendEmbed(serv);
-    }) 
-    }
-    });
-client.on('message',function(message) {
-   if(message.content.startsWith(prefix + "bot GE")) {
-       message.channel.send(`**متواجد حاليا في : \`\`${client.guilds.size}\`\` سيرفرات مختلفة**`);
-   } 
-});
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// سيرفر الدعم
    client.on('message', message => {
-     if (message.content === "G-support" || message.content === "G-دعم") {
+     if (message.content === "📌 support" || message.content === "📌 دعم") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
@@ -371,8 +318,10 @@ G-admin ( اكتب الرسالة هنا ) | او ارسل رسالتك للبو
 }
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 client.on('message', message => {
-    if (message.content.startsWith("A+yes")) {
+    if (message.content.startsWith("📌 yes")) {
     let embed = new Discord.RichEmbed() 
     .setColor("#ffffff")
     .setTimestamp('**Clicl here to add ..**')
