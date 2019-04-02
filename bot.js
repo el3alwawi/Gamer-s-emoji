@@ -321,12 +321,11 @@ G-admin ( اكتب الرسالة هنا ) | او ارسل رسالتك للبو
 
 
 client.on('message', message => {
-    if (message.content.startsWith("📌 yes")) {
+    if (message.content.startsWith("1⃣ yes")) {
     let embed = new Discord.RichEmbed() 
     .setColor("#ffffff")
-    .setTimestamp('**Clicl here to add ..**')
+    .setTimestamp()
     .setURL(`https://discord.gg/yQgRBf2`)
-    .addField("نعم نعم نعم..")
     .setAuthor(message.author.username)
     .setImage('https://pic.chinesefontdesign.com/uploads/2018/01/chinesefontdesign.com-2018-01-04_11-06-17_375325.gif')
     .setTitle('**Clicl here to add ..**')
