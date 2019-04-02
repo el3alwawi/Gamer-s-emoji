@@ -157,18 +157,13 @@ client.on('message', message => {
     let result = `${arrayRPS[Math.floor(Math.random() * arrayRPS.length)]}`;
     var RpsEmbed = new Discord.RichEmbed()
     .setAuthor(message.author.username)
-    .setThumbnail(message.author.avatarURL)
+    .setThumbnail(message.author.avatarURL")
     .setTitle('**تفضل أوامر البوتات حقنا وان شاء الله تعجبك **')
-    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif",'1⃣',true)
-    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif",'2⃣',true)
-    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif",'3⃣',true)
-    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif",'4⃣',true)
-    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-3.gif",'5⃣',true)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif','1️⃣ كيوت',true)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif','1️⃣ ارقص',true)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif','1️⃣ بلا بلا',true)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif','1️⃣ يع',true)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif','1️⃣ بيبي',true)
+    .addField('1⃣',true)
+    .addField('2⃣',true)
+    .addField('3⃣',true)
+    .addField('4⃣',true)
+    .addField('5⃣',true)
      message.channel.send(RpsEmbed).then(msg => {
      msg.react('1⃣')
      msg.react('2⃣')
@@ -185,11 +180,11 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '2⃣' && user
 let reaction3Filter = (reaction, user) => reaction.emoji.name === '3⃣' && user.id === message.author.id;
 let reaction4Filter = (reaction, user) => reaction.emoji.name === '4⃣' && user.id === message.author.id;
 let reaction5Filter = (reaction, user) => reaction.emoji.name === '5⃣' && user.id === message.author.id;
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 20000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 19000 });
-let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 18000 });
-let reaction4 = msg.createReactionCollector(reaction4Filter, { time: 17000 });
-let reaction5 = msg.createReactionCollector(reaction5Filter, { time: 21000 });
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 50000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 50000 });
+let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 50000 });
+let reaction4 = msg.createReactionCollector(reaction4Filter, { time: 50000 });
+let reaction5 = msg.createReactionCollector(reaction5Filter);
 reaction1.on("collect", r => {
   const embed = new Discord.RichEmbed()
       .setThumbnail('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif')
