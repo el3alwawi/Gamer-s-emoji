@@ -371,7 +371,7 @@ G-admin ( اكتب الرسالة هنا ) | او ارسل رسالتك للبو
 }
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-bot.on('message', message => {
+client.on('message', message => {
     if (message.content.startsWith("A-yes")) {
     let embed = new Discord.RichEmbed() 
     .setColor("#ffffff")
