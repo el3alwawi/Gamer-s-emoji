@@ -326,9 +326,10 @@ client.on('message', message => {
     .setColor("#ffffff")
     .setTimestamp('**Clicl here to add ..**')
     .setURL(`https://discord.gg/yQgRBf2`)
+    .setFiled("نعم نعم نعم..")
     .setAuthor(message.author.username)
     .setImage('https://pic.chinesefontdesign.com/uploads/2018/01/chinesefontdesign.com-2018-01-04_11-06-17_375325.gif')
-    .setTitle("**Gamer's Emoji**")
+    .setTitle('**Clicl here to add ..**')
      message.channel.sendEmbed(embed) 
       }
     })
