@@ -164,6 +164,11 @@ client.on('message', message => {
     .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif",'3⃣',true)
     .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif",'4⃣',true)
     .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-3.gif",'5⃣',true)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif','1️⃣ كيوت',true)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif','1️⃣ ارقص',true)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif','1️⃣ بلا بلا',true)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif','1️⃣ يع',true)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif','1️⃣ بيبي',true)
      message.channel.send(RpsEmbed).then(msg => {
      msg.react('1⃣')
      msg.react('2⃣')
