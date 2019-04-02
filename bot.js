@@ -188,24 +188,15 @@ let reaction5 = msg.createReactionCollector(reaction5Filter, { time: 21000 });
 reaction1.on("collect", r => {
   const embed = new Discord.RichEmbed()
       .setThumbnail('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif')
+  .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif','1️⃣ كيوت',true)
+  .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif','1️⃣ ارقص',true)
+  .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif','1️⃣ بلا بلا',true)
+  .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif','1️⃣ يع',true)
+  .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif','1️⃣ بيبي',true)
       .setColor("#000000")
       .setDescription(`
 **ضع الأمر مثل ما هو بالضبط مع الايموجي الرقم**
 
-1️⃣ كيوت
-https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif
-1️⃣ ارقص
-https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif
-1️⃣ بلا بلا
-https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif
-1️⃣ يع
-https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif
-1️⃣ بيبي
-https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif
-1️⃣ فقاعة
-https://pic.chinesefontdesign.com/uploads/2013/12/20111012-2.gif
-1️⃣ كاراتي
-https://pic.chinesefontdesign.com/uploads/2013/12/20111012mtjj.gif
 
 
 :sparkles: **G-admin** :point_left: **لارسال رسالة الى ادمن البوت __اكتب الامر وبعده الرسالة__**
