@@ -38,7 +38,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i]);
+        client.user.setGame("https://www.twitch.tv/el3alwawi");
     }, ms);
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
