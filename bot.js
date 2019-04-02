@@ -157,7 +157,7 @@ client.on('message', message => {
     let result = `${arrayRPS[Math.floor(Math.random() * arrayRPS.length)]}`;
     var RpsEmbed = new Discord.RichEmbed()
     .setAuthor(message.author.username)
-    .setThumbnail(message.author.avatarURL")
+    .setThumbnail(message.author.avatarURL)
     .setTitle('**تفضل أوامر البوتات حقنا وان شاء الله تعجبك **')
     .addField('1⃣',true)
     .addField('2⃣',true)
