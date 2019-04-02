@@ -149,7 +149,7 @@ client.on('message', message => {
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// امر help
    client.on("message", function(message) {
-    var prefix = "GE-";
+    var prefix = "📌 ";
    if(message.content.startsWith(prefix + "help") || message.content.startsWith(prefix + "مساعدة")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
@@ -159,27 +159,27 @@ client.on('message', message => {
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
     .setTitle('**تفضل أوامر البوتات حقنا وان شاء الله تعجبك **')
-    .addField("Puplic | عامه","🗣",true)
-    .addField("Admin | ادمنيه","🔴",true)
-    .addField("Games | العاب","🕹",true)
-    .addField("Orders | قانون السيرفر","🚧",true)
-    .addField("Rainbow | الوان ريمبو","🌈",true)
+    .addField("Puplic | عامه","1️⃣",true)
+    .addField("Admin | ادمنيه","2️⃣",true)
+    .addField("Games | العاب","3️⃣",true)
+    .addField("Orders | قانون السيرفر","4️⃣",true)
+    .addField("Rainbow | الوان ريمبو","5️⃣",true)
      message.channel.send(RpsEmbed).then(msg => {
-     msg.react('🗣')
-     msg.react("🔴")
-     msg.react("🕹")
-     msg.react("🚧")
-     msg.react('🌈')
-.then(() => msg.react('🗣'))
-.then(() => msg.react('🔴'))
-.then(() => msg.react('🕹'))
-.then(() => msg.react('🚧'))
-.then(() => msg.react('🌈'))
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '🗣' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '🔴' && user.id === message.author.id;
-let reaction3Filter = (reaction, user) => reaction.emoji.name === '🕹' && user.id === message.author.id;
-let reaction4Filter = (reaction, user) => reaction.emoji.name === '🚧' && user.id === message.author.id;
-let reaction5Filter = (reaction, user) => reaction.emoji.name === '🌈' && user.id === message.author.id;
+     msg.react('1️⃣')
+     msg.react("2️⃣")
+     msg.react("3️⃣")
+     msg.react("4️⃣")
+     msg.react('5️⃣')
+.then(() => msg.react('1️⃣'))
+.then(() => msg.react('2️⃣'))
+.then(() => msg.react('3️⃣'))
+.then(() => msg.react('4️⃣'))
+.then(() => msg.react('5️⃣'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
+let reaction3Filter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
+let reaction4Filter = (reaction, user) => reaction.emoji.name === '4️⃣' && user.id === message.author.id;
+let reaction5Filter = (reaction, user) => reaction.emoji.name === '5️⃣' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 20000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 19000 });
 let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 18000 });
@@ -187,10 +187,27 @@ let reaction4 = msg.createReactionCollector(reaction4Filter, { time: 17000 });
 let reaction5 = msg.createReactionCollector(reaction5Filter, { time: 21000 });
 reaction1.on("collect", r => {
   const embed = new Discord.RichEmbed()
-      .setThumbnail('https://images-ext-2.discordapp.net/external/JD7xvknBVacXHoC2re78AtJN4PUY5IjUZy1uWIqzObI/https/s3.amazonaws.com/eclincher.wp.upload/wp-content/uploads/2015/08/25155834/people-icon.png')
+      .setThumbnail('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif')
       .setColor("#000000")
       .setDescription(`
-**:small_orange_diamond: هذي قائمة المساعدة لبوت Gamer's Emoji وراح نضيف اشياء ثانية عن قريب ..**
+**ضع الأمر مثل ما هو بالضبط مع الايموجي الرقم**
+
+1️⃣ كيوت
+https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif
+1️⃣ ارقص
+https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif
+1️⃣ بلا بلا
+https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif
+1️⃣ يع
+https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif
+1️⃣ بيبي
+https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif
+1️⃣ فقاعة
+https://pic.chinesefontdesign.com/uploads/2013/12/20111012-2.gif
+1️⃣ كاراتي
+https://pic.chinesefontdesign.com/uploads/2013/12/20111012mtjj.gif
+
+
 :sparkles: **G-admin** :point_left: **لارسال رسالة الى ادمن البوت __اكتب الامر وبعده الرسالة__**
 :sparkles: **-invite bot** :point_left: **إذا تبي تضيف البوت في سيرفرك راح يرسلك في الخاص**
 :sparkles: **رابط** :point_left: **يرسل لك البوت رابط اينفايت بالخاص**
@@ -272,27 +289,234 @@ G-admin ( اكتب الرسالة هنا ) | او ارسل رسالتك للبو
 }
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//Meow star people
 
 client.on('message', message => {
-    if (message.content.startsWith("1⃣ yes")) {
+    if (message.content.startsWith("1️⃣ ارقص")) {
     let embed = new Discord.RichEmbed() 
-    .setTitle('**Clicl here to add ..**')
-    .setColor("#ffffff")
-    .setTimestamp()
-    .setURL(`https://discord.gg/yQgRBf2`)
     .setAuthor(message.author.username)
-    .setImage('https://pic.chinesefontdesign.com/uploads/2018/01/chinesefontdesign.com-2018-01-04_11-06-17_375325.gif','https://pic.chinesefontdesign.com/uploads/2018/01/chinesefontdesign.com-2018-01-04_11-06-27_551542.gif',true)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-3.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ كيوت")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ بلا بلا")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ بيبي")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ يع")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ فقاعة")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012-2.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+client.on('message', message => {
+    if (message.content.startsWith("1️⃣ كاراتي")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/12/20111012mtjj.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
      message.channel.sendEmbed(embed) 
       }
     })
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Street boy
+
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ نعم")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean10.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ بوسة") || message.content.startsWith("2️⃣ بوسني")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean1.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ لايك")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean2.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ تعال") || message.content.startsWith("2️⃣ تعالي")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean4.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ مطفر")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean30.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ اضحك")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean13.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ نو") || message.content.startsWith("2️⃣ لا")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean11.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ فاشل")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean16.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ هيب هوب") || message.content.startsWith("2️⃣ hip hop")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean6.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
+ client.on('message', message => {
+    if (message.content.startsWith("2️⃣ ايش؟")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean3.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
 
-
-
+ client.on('message', message => {
+    if (message.content.startsWith("3️⃣ ايش؟")) {
+    let embed = new Discord.RichEmbed() 
+    .setAuthor(message.author.username)
+    .setTitle('**Clicl here to add ..**')
+    .setURL(`https://discord.gg/yQgRBf2`)
+    .setImage('https://pic.chinesefontdesign.com/uploads/2013/06/jean3.gif')
+    .setTimestamp()
+    .setColor("#ffffff")
+     message.channel.sendEmbed(embed) 
+      }
+    })
 
 
 
