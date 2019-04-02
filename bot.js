@@ -159,27 +159,27 @@ client.on('message', message => {
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
     .setTitle('**تفضل أوامر البوتات حقنا وان شاء الله تعجبك **')
-    .addField("Puplic | عامه","1️⃣",true)
-    .addField("Admin | ادمنيه","2️⃣",true)
-    .addField("Games | العاب","3️⃣",true)
-    .addField("Orders | قانون السيرفر","4️⃣",true)
-    .addField("Rainbow | الوان ريمبو","5️⃣",true)
+    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-5.gif",'1⃣',true)
+    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-4.gif",'2⃣',true)
+    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-1.gif",'3⃣',true)
+    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111011-2.gif",'4⃣',true)
+    .addField("https://pic.chinesefontdesign.com/uploads/2013/12/20111012-3.gif",'5⃣',true)
      message.channel.send(RpsEmbed).then(msg => {
-     msg.react('1️⃣')
-     msg.react("2️⃣")
-     msg.react("3️⃣")
-     msg.react("4️⃣")
-     msg.react('5️⃣')
-.then(() => msg.react('1️⃣'))
-.then(() => msg.react('2️⃣'))
-.then(() => msg.react('3️⃣'))
-.then(() => msg.react('4️⃣'))
-.then(() => msg.react('5️⃣'))
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '1️⃣' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '2️⃣' && user.id === message.author.id;
-let reaction3Filter = (reaction, user) => reaction.emoji.name === '3️⃣' && user.id === message.author.id;
-let reaction4Filter = (reaction, user) => reaction.emoji.name === '4️⃣' && user.id === message.author.id;
-let reaction5Filter = (reaction, user) => reaction.emoji.name === '5️⃣' && user.id === message.author.id;
+     msg.react('1⃣')
+     msg.react('2⃣')
+     msg.react('3⃣')
+     msg.react('4⃣')
+     msg.react('5⃣')
+.then(() => msg.react('1⃣'))
+.then(() => msg.react('2⃣'))
+.then(() => msg.react('3⃣'))
+.then(() => msg.react('4⃣'))
+.then(() => msg.react('5⃣'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '1⃣' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '2⃣' && user.id === message.author.id;
+let reaction3Filter = (reaction, user) => reaction.emoji.name === '3⃣' && user.id === message.author.id;
+let reaction4Filter = (reaction, user) => reaction.emoji.name === '4⃣' && user.id === message.author.id;
+let reaction5Filter = (reaction, user) => reaction.emoji.name === '5⃣' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 20000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 19000 });
 let reaction3 = msg.createReactionCollector(reaction3Filter, { time: 18000 });
